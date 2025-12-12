@@ -1,5 +1,7 @@
 # DL COM Items
 
+Read Me last updated 12/12/2025
+
 Project for managing custom items data for the Deadlock community.
 
 ## Project Structure
