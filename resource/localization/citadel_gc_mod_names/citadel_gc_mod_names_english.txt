@@ -114,6 +114,7 @@
 		"upgrade_barbed_bullets"				"Barbed Wire Bullets"
 		"upgrade_melee_extender"				"Coup de Grace"
 		"upgrade_hadoken"						"Energy Fist"
+		"upgrade_accel_drum"					"Accelerating Drum"
 
 		//-----------------------------------------------------------------------------
 		// Upgrades: Tech
