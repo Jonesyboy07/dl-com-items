@@ -740,6 +740,9 @@
 		"upgrade_glitch_desc"					"Curses an enemy - <span class=\"highlight\">interrupting, Silencing, Disarming</span>, and <span class=\"highlight\">preventing item usage</span>. <span class=\"highlight\">Removes all non-ultimate buffs</span>."
 		"upgrade_glitch/modifier_glitch_debuff"	"Cursed!"
 
+		//Drowsy Hex
+		"upgrade_sleep_blast_desc"				"Apply sleep to an enemy"
+
 		//Bullet Resist Shredder
 		"upgrade_bullet_resist_shredder_desc"	"Reduces <span class=\"highlight\">Bullet Resist</span> on enemies when you deal <span class=\"highlight\">Spirit Damage</span>."
 		"upgrade_bullet_resist_shredder/modifier_bullet_armor_shredder_proc/modifier_bullet_armor_shredder" "Reduced bullet armor"
