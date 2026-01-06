@@ -261352,7 +261352,7 @@
 			}
 			BonusSprintSpeed = 
 			{
-				m_strValue = "3"
+				m_strValue = "3m"
 				m_strCSSClass = "move_speed"
 				m_eDisplayType = "ESprintSpeed"
 				m_eProvidedPropertyType = "MODIFIER_VALUE_SPRINT_SPEED_BONUS"
