@@ -261650,14 +261650,27 @@
 				m_eProvidedPropertyType = "MODIFIER_VALUE_MELEE_DAMAGE_REDUCTION_PERCENT"
 				m_eStatsUsageFlags = ""
 			}
-			HealingFactor = 
+			DamageHealMult = 
 			{
-				m_strValue = "66"
+				m_strValue = "0.5"
 				m_strCSSClass = "healing"
+				m_eDisplayType = "EHealthRegen"
 				m_subclassScaleFunction = subclass:
 				{
 					_class = "scale_function_single_stat"
-					_my_subclass_name = "HealingFactor_scale_function"
+					_my_subclass_name = "DamageHealMult_scale_function"
+					m_eSpecificStatScaleType = "EHealingOutput"
+				}
+			}
+			DamageHealMultNonHero = 
+			{
+				m_strValue = "0.5"
+				m_strCSSClass = "healing"
+				m_eDisplayType = "EHealthRegen"
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "DamageHealMultNonHero_scale_function"
 					m_eSpecificStatScaleType = "EHealingOutput"
 				}
 			}
@@ -261715,7 +261728,8 @@
 						[
 							"BonusHealth",
 							"MeleeResistPercent",
-							"AbilityLifestealPercentHero",
+							"DamageHealMult",
+							"DamageHealMultNonHero",
 						]
 					},
 				]
@@ -261739,7 +261753,8 @@
 						[
 							"DamagePulseRadius",
 							"AbilityCooldown",
-							"HealingFactor",
+							"DamageHealMult",
+							"DamageHealMultNonHero",
 						]
 					},
 				]
