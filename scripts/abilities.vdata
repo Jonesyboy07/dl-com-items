@@ -261728,8 +261728,7 @@
 						[
 							"BonusHealth",
 							"MeleeResistPercent",
-							"DamageHealMult",
-							"DamageHealMultNonHero",
+							"AbilityLifestealPercentHero",
 						]
 					},
 				]
