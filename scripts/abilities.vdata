@@ -260849,4 +260849,305 @@
 		m_strShopIconLarge = panorama:"file://{images}/items/spirit/sleep_blast.psd"
 		m_strShopIconSmall = panorama:"file://{images}/items/spirit/sleep_blast.png"
 	}
+	upgrade_soothing_stone = 
+	{
+		_class = "upgrade_restorative_locket"
+		m_mapAbilityProperties = 
+		{
+			AbilityCooldown = 
+			{
+				m_strValue = 30.000000
+				m_strDisableValue = "0"
+				m_strCSSClass = "cooldown"
+				m_bCanSetTokenOverride = true
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "AbilityCooldown_scale_function"
+					m_eSpecificStatScaleType = "EItemCooldown"
+				}
+			}
+			AbilityDuration = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_strCSSClass = "duration"
+				m_bCanSetTokenOverride = true
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "AbilityDuration_scale_function"
+					m_eSpecificStatScaleType = "ETechDuration"
+				}
+			}
+			AbilityCastRange = 
+			{
+				m_strValue = "30m"
+				m_eDisplayUnits = "EDisplayUnit_Meters"
+				m_strCSSClass = "range"
+				m_bCanSetTokenOverride = true
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "AbilityCastRange_scale_function"
+					m_eSpecificStatScaleType = "ETechRange"
+				}
+			}
+			AbilityUnitTargetLimit = 
+			{
+				m_strValue = "1"
+				m_bCanSetTokenOverride = true
+			}
+			AbilityCastDelay = 
+			{
+				m_strValue = "0.1"
+				m_strDisableValue = "0"
+				m_strCSSClass = "cast"
+				m_bCanSetTokenOverride = true
+			}
+			AbilityChannelTime = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_strCSSClass = "cast"
+				m_bCanSetTokenOverride = true
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_multi_stats"
+					_my_subclass_name = "scale_duration"
+					m_vecScalingStats = 
+					[
+						"EChannelDuration",
+						"ETechDuration",
+					]
+				}
+			}
+			AbilityPostCastDuration = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+			}
+			AbilityCharges = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_strCSSClass = "cast"
+				m_bCanSetTokenOverride = true
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "AbilityCharges_scale_function"
+					m_eSpecificStatScaleType = "EMaxChargesIncrease"
+				}
+			}
+			AbilityCooldownBetweenCharge = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_strCSSClass = "charge_cooldown"
+				m_bCanSetTokenOverride = true
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "AbilityCooldownBetweenCharge_scale_function"
+					m_eSpecificStatScaleType = "ETechCooldownBetweenChargeUses"
+				}
+			}
+			ChannelMoveSpeed = 
+			{
+				m_strValue = "-1"
+				m_eDisplayUnits = "EDisplayUnit_MetersPerSecond"
+				m_strCSSClass = "move_speed"
+				m_bCanSetTokenOverride = true
+			}
+			AbilityResourceCost = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_bCanSetTokenOverride = true
+				m_strCSSClass = "cast"
+			}
+			TechPower = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_bCanSetTokenOverride = true
+				m_eProvidedPropertyType = "MODIFIER_VALUE_TECH_POWER"
+			}
+			WeaponPower = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_bCanSetTokenOverride = true
+				m_eProvidedPropertyType = "MODIFIER_VALUE_WEAPON_POWER"
+			}
+			Radius = 
+			{
+				m_strValue = "30m"
+				m_strCSSClass = "distance"
+			}
+			TechResist = 
+			{
+				m_strValue = "6"
+				m_eDisplayType = "ETechArmorDamageReduction"
+				m_strCSSClass = "tech_armor_up"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST"
+				m_eStatsUsageFlags = ""
+			}
+			BulletResist = 
+			{
+				m_strValue = "6"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST"
+				m_eDisplayType = "EBulletArmorDamageReduction"
+				m_strCSSClass = "bullet_armor_up"
+			}
+			StatusResistancePercent = 
+			{
+				m_strValue = "10"
+				m_strCSSClass = "duration"
+				m_eDisplayType = "EDebuffResist"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_STATUS_RESISTANCE"
+				m_eStatsUsageFlags = ""
+			}
+			MeleeResistPercent = 
+			{
+				m_eDisplayType = "EMeleeResist"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_MELEE_DAMAGE_REDUCTION_PERCENT"
+				m_eStatsUsageFlags = ""
+			}
+			BonusSprintSpeed = 
+			{
+				m_strCSSClass = "move_speed"
+				m_eDisplayType = "ESprintSpeed"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_SPRINT_SPEED_BONUS"
+				m_eStatsUsageFlags = ""
+			}
+			HealPerStack = 
+			{
+				m_strValue = "30"
+				m_strCSSClass = "healing"
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_multi_stats"
+					_my_subclass_name = "TotalHealthRegen_scale_function"
+					m_vecScalingStats = 
+					[
+						"EHealingOutput",
+						"ELevelUpBoons",
+					]
+					m_eSpecificStatScaleType = "ELevelUpBoons"
+					m_flStatScale = 1.000000
+				}
+			}
+			MaxStacks = 
+			{
+				m_strValue = "50"
+			}
+			StaminaToRestore = 
+			{
+				m_strValue = "4"
+			}
+		}
+		m_bitsPostCastEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
+		_editor = 
+		{
+			folder_name = "Armor"
+		}
+		m_WeaponInfo = 
+		{
+			m_flBulletSpeed = 10000.000000
+		}
+		m_bitsChannelEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
+		m_bitsPreCastEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
+		_multibase = 
+		[
+			"armor_upgrade_t3",
+		]
+		m_bStartTrained = true
+		m_eAbilityType = "EAbilityType_Item"
+		m_nUpgradeSlotCost = 1
+		m_eAbilityTargetingLocation = "CITADEL_ABILITY_TARGETING_LOCATION_UNIT"
+		m_eAbilityActivation = "CITADEL_ABILITY_ACTIVATION_PRESS"
+		m_strCastAnimGraphParam = "e_GenericCast"
+		m_strCastAnimSequenceName = "ability_generic_cast"
+		m_strSelectionNameOverride = "item"
+		m_PreviewPathParticle = resource_name:"particles/generic/generic_arc.vpcf"
+		m_flBossDamageScale = 1.000000
+		m_strAG2SourceName = "item"
+		m_eItemSlotType = "EItemSlotType_Armor"
+		m_iItemTier = "EModTier_3"
+		m_iUpdateTime = 1711477520
+		m_nAbilityTargetTypes = "CITADEL_UNIT_TARGET_HERO_FRIENDLY"
+		m_AbilityBehaviorsBits = "CITADEL_ABILITY_BEHAVIOR_ALLOW_SELF_CAST | CITADEL_ABILITY_BEHAVIOR_CAN_CAST_ON_ZIPLINE | CITADEL_ABILITY_BEHAVIOR_USE_INSTANT_CAST_UNIT_TARGET_UI | CITADEL_ABILITY_BEHAVIOR_CAN_SET_QUICK_CAST"
+		m_eAbilityTargetingShape = "CITADEL_ABILITY_TARGETING_SHAPE_CONE"
+		m_flTargetingConeAngle = 45
+		m_strCSSClass = "restorativeLocket"
+		m_strAbilityImage = panorama:"file://{images}/upgrades/mods_armor/restorative_locket.psd"
+		m_strCastSound = soundevent:"Mods.Armor.RestorativeLocket.Cast"
+		m_CastParticle = resource_name:"particles/upgrades/restorative_locket_cast.vpcf"
+		m_TrailParticle = resource_name:"particles/upgrades/restorative_locket_cast_on_friendly.vpcf"
+		m_AutoIntrinsicModifiers = 
+		[
+			subclass:
+			{
+				_class = "modifier_intrinsic_base"
+				_my_subclass_name = "modifier_intrinsic_base"
+				m_vecAutoRegisterModifierValueFromAbilityPropertyName = 
+				[
+					"TechResist",
+					"BulletResist",
+					"StatusResistancePercent",
+				]
+			},
+		]
+		m_vecTooltipSectionInfo = 
+		[
+			
+			{
+				m_eAbilitySectionType = "EArea_Innate"
+				m_vecSectionAttributes = 
+				[
+					
+					{
+						m_vecAbilityProperties = 
+						[
+							"TechResist",
+							"BulletResist",
+							"StatusResistancePercent",
+						]
+					},
+				]
+			},
+			
+			{
+				m_eAbilitySectionType = "EArea_Active"
+				m_vecSectionAttributes = 
+				[
+					
+					{
+						m_strLocString = "#upgrade_restorative_locket_active_desc"
+						m_vecImportantAbilityProperties = 
+						[
+							
+							{
+								m_strImportantProperty = "HealPerStack"
+							},
+						]
+						m_vecAbilityProperties = 
+						[
+							"AbilityCooldown",
+							"MaxStacks",
+						]
+					},
+				]
+			},
+		]
+		m_eShopFilters = "EShopFilterHealing | EShopFilterDurability"
+		m_strShopIconLarge = panorama:"file://{images}/items/vitality/soothing_stone.psd"
+		m_strShopIconSmall = panorama:"file://{images}/items/vitality/soothing_stone_sm.png"
+		m_strSelectedSound = soundevent:"Mods.Armor.RestorativeLocket.Select"
+		m_strUnselectedSound = soundevent:"Mods.Armor.RestorativeLocket.Unselect"
+		m_strStackSound = soundevent:"Mods.Armor.RestorativeLocket.Stack"
+		m_strTargetHealSound = soundevent:"Mods.Armor.RestorativeLocket.Target"
+	}
 }
