@@ -259721,7 +259721,7 @@
 			_class = "modifier_base"
 			_my_subclass_name = "notification"
 			m_bIsHidden = true
-			m_strHudMessageText = "#upgrade_coffee_shots"
+			m_strHudMessageText = "#upgrade_express_shot"
 			m_nAttributes = "MODIFIER_ATTRIBUTE_CANNOT_BE_PURGED"
 			m_sStartSound = soundevent:"Mods.Weapon.Express.Shot.Sweetener"
 		}
@@ -261086,10 +261086,6 @@
 		m_eAbilityTargetingShape = "CITADEL_ABILITY_TARGETING_SHAPE_CONE"
 		m_flTargetingConeAngle = 45
 		m_strCSSClass = "restorativeLocket"
-		m_vecComponentItems = 
-		[
-			"upgrade_restorative_locket",
-		]
 		m_strAbilityImage = panorama:"file://{images}/upgrades/mods_armor/restorative_locket.psd"
 		m_strCastSound = soundevent:"Mods.Armor.RestorativeLocket.Cast"
 		m_CastParticle = resource_name:"particles/upgrades/restorative_locket_cast.vpcf"
@@ -261150,6 +261146,10 @@
 				]
 			},
 		]
+		m_vecComponentItems = 
+		[
+			"upgrade_restorative_locket",
+		]
 		m_eShopFilters = "EShopFilterHealing | EShopFilterDurability"
 		m_strShopIconLarge = panorama:"file://{images}/items/vitality/soothing_stone.psd"
 		m_strShopIconSmall = panorama:"file://{images}/items/vitality/soothing_stone_sm.png"
@@ -261165,7 +261165,7 @@
 		{
 			AbilityCooldown = 
 			{
-				m_strValue = "0"
+				m_strValue = "1"
 				m_strDisableValue = "0"
 				m_strCSSClass = "cooldown"
 				m_bCanSetTokenOverride = true
@@ -261366,7 +261366,7 @@
 		m_bitsPreCastEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
 		_multibase = 
 		[
-			"weapon_upgrade_t3",
+			"weapon_upgrade_t4",
 		]
 		m_bStartTrained = true
 		m_eAbilityType = "EAbilityType_Item"
@@ -261380,7 +261380,7 @@
 		m_flBossDamageScale = 1.000000
 		m_strAG2SourceName = "item"
 		m_eItemSlotType = "EItemSlotType_WeaponMod"
-		m_iItemTier = "EModTier_3"
+		m_iItemTier = "EModTier_4"
 		m_bShowInPassiveItemsArea = true
 		m_ProcNotificationModifier = subclass:
 		{
@@ -261442,7 +261442,7 @@
 		]
 		m_vecComponentItems = 
 		[
-			"upgrade_high_velocity_mag",
+			"upgrade_express_shot",
 		]
 		m_AutoIntrinsicModifiers = 
 		[
