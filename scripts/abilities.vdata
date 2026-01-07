@@ -262028,8 +262028,8 @@
 		m_WeaponInfo = 
 		{
 			m_flBulletSpeed = 1600.000000
-			m_szBulletTravelTracerParticle = resource_name:"particles/items/thermal_detonator_projectile.vpcf"
-			m_strBulletLoopingSound = soundevent:"Mods.Weapon.Thermal.Detonator.Proj.Lp"
+			m_szBulletTravelTracerParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_projectile.vpcf"
+			m_strBulletLoopingSound = soundevent:"Ability.GhostSoldier.BloodBomb.Lp"
 			m_eAttachmentSourceType = "EAttachmentSource_Custom"
 			m_flVerticalAimBias = 10.000000
 			m_flBulletRadius = 1.000000
