@@ -262004,7 +262004,7 @@
 			}
 			ArmingDuration = 
 			{
-				m_strValue = "0.65"
+				m_strValue = "3"
 				m_strCSSClass = "duration"
 			}
 			BeepSoundIntervalBias = 
