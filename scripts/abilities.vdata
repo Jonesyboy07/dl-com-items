@@ -261462,14 +261462,14 @@
 		m_strShopIconLarge = panorama:"file://{images}/items/weapon/top_brass.psd"
 		m_strShopIconSmall = panorama:"file://{images}/items/weapon/top_brass_sm.png"
 	}
-	upgrade_unending_dispair = 
+	upgrade_unending_despair = 
 	{
 		_class = "upgrade_tech_damage_pulse"
 		m_mapAbilityProperties = 
 		{
 			AbilityCooldown = 
 			{
-				m_strValue = 1.400000
+				m_strValue = 0.70000
 				m_strDisableValue = "0"
 				m_strCSSClass = "cooldown"
 				m_bCanSetTokenOverride = true
@@ -261777,7 +261777,7 @@
 		]
 		m_eShopFilters = "EShopFilterMagicDamage | EShopFilterDurability"
 		m_strCastSound = soundevent:""
-		m_strShopIconLarge = panorama:"file://{images}/items/spirit/unending_dispair.psd"
-		m_strShopIconSmall = panorama:"file://{images}/items/spirit/unending_dispair_sm.png"
+		m_strShopIconLarge = panorama:"file://{images}/items/spirit/unending_despair.psd"
+		m_strShopIconSmall = panorama:"file://{images}/items/spirit/unending_despair_sm.png"
 	}
 }
