@@ -261897,7 +261897,7 @@
 			}
 			AbilityCastDelay = 
 			{
-				m_strValue = "0"
+				m_strValue = "0.2"
 				m_strDisableValue = "0"
 				m_strCSSClass = "cast"
 				m_bCanSetTokenOverride = true
