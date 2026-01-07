@@ -262004,7 +262004,7 @@
 			}
 			ArmingDuration = 
 			{
-				m_strValue = "10"
+				m_strValue = "0.65"
 				m_strCSSClass = "duration"
 			}
 			BeepSoundIntervalBias = 
@@ -262033,6 +262033,7 @@
 			m_eAttachmentSourceType = "EAttachmentSource_Custom"
 			m_flVerticalAimBias = 10.000000
 			m_flBulletRadius = 1.000000
+			m_nBehaviors = "PBF_StickToWorld | PBF_StartDetonateTimeOnHitTarget | PBF_StartDetonateTimeOnHitWorld"
 			m_mapImpactEffects = 
 			{
 				default = 
@@ -262072,7 +262073,7 @@
 			m_flUpSpeed = 100
 			m_particle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_projectile.vpcf"
 			m_warningParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_warning.vpcf"
-			m_flVerticalAimBias = 4.500000
+			m_flVerticalAimBias = 4.500000 
 			m_nBehaviors = "PBF_StickToWorld | PBF_StartDetonateTimeOnHitTarget | PBF_StartDetonateTimeOnHitWorld"
 			m_DetonateSound = soundevent:"Ability.GhostSoldier.BloodBomb.Explode"
 			m_WarningSound = soundevent:"Ability.GhostSoldier.BloodBomb.Warning"
