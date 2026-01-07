@@ -262070,8 +262070,6 @@
 			m_HitSound = soundevent:""
 		}
 		m_previewParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_preview.vpcf"
-		m_strSecondaryStatName = "ability_blood_bomb_bloodspill"
-		m_strMoviePreviewPath = "file://{resources}/videos/hero_abilities/ghost_blood_bomb.webm"
 		m_ExplodeParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_explode.vpcf"
 		m_vecTooltipSectionInfo = 
 		[
@@ -262129,6 +262127,6 @@
 		m_strShopIconSmall = panorama:"file://{images}/items/weapon/aoe_delay_blast_sm.png"
 		m_strAG2CastingAction = "throw"
 		m_strAG2ChannelingAction = ""
-		m_eShopFilters = "EShopFilterWeaponDamage | EShopFilterMagicDamage"
+
 	}
 }
