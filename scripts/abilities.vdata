@@ -262054,12 +262054,12 @@
 		m_eAbilityTargetingLocation = "CITADEL_ABILITY_TARGETING_LOCATION_NONE"
 		m_eAbilityActivation = "CITADEL_ABILITY_ACTIVATION_PRESS"
 		m_strAbilityImage = panorama:"file://{images}/hud/abilities/spectre/blood_bomb.psd"
-		m_AbilityBehaviorsBits = "CITADEL_ABILITY_BEHAVIOR_PROJECTILE | CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT | CITADEL_ABILITY_BEHAVIOR_CAN_SET_QUICK_CAST"
+		m_AbilityBehaviorsBits = "CITADEL_ABILITY_BEHAVIOR_PROJECTILE | CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT | CITADEL_ABILITY_BEHAVIOR_PROJECTILE_FIRED_AS_BULLET | CITADEL_ABILITY_BEHAVIOR_CAN_SET_QUICK_CAST"
 		m_nAbilityTargetTypes = "CITADEL_UNIT_TARGET_ALL_ENEMY"
 		m_projectileInfo = 
 		{
 			m_flSpeed = 2000
-			m_flUpSpeed = 0
+			m_flUpSpeed = 100
 			m_particle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_projectile.vpcf"
 			m_warningParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_warning.vpcf"
 			m_flVerticalAimBias = 4.500000
@@ -262127,6 +262127,5 @@
 		m_strShopIconSmall = panorama:"file://{images}/items/weapon/aoe_delay_blast_sm.png"
 		m_strAG2CastingAction = "throw"
 		m_strAG2ChannelingAction = ""
-
 	}
 }
