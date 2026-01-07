@@ -262332,6 +262332,13 @@
 				m_eProvidedPropertyType = "MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST"
 				m_eStatsUsageFlags = "ConditionallyApplied"
 			}
+			Stamina = 
+			{
+				m_strValue = "1"
+				m_eDisplayType = "EStamina"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_STAMINA"
+				m_eStatsUsageFlags = ""
+			}
 		}
 		m_bitsPostCastEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
 		_editor = 
@@ -262382,6 +262389,7 @@
 							"ParryCooldownReduction",
 							"MeleeResistPercent",
 							"BonusHealth",
+							"Stamina",
 						]
 					},
 				]
