@@ -260047,7 +260047,7 @@
 	}
 	upgrade_accel_drum = 
 	{
-		_class = "citadel_item"
+		_class = "upgrade_intensifying_clip"
 		m_mapAbilityProperties = 
 		{
 			AbilityCooldown = 
@@ -260172,7 +260172,7 @@
 			}
 			WeaponPower = 
 			{
-				m_strValue = "50"
+				m_strValue = "0"
 				m_strDisableValue = "0"
 				m_bCanSetTokenOverride = true
 				m_eProvidedPropertyType = "MODIFIER_VALUE_WEAPON_POWER"
@@ -260180,7 +260180,31 @@
 			BonusClipSizePercent = 
 			{
 				m_strValue = "30"
+				m_eDisplayType = "EClipSizeIncrease"
 				m_eProvidedPropertyType = "MODIFIER_VALUE_AMMO_CLIP_SIZE_PERCENT"
+				m_eStatsUsageFlags = ""
+			}
+			BaseAttackDamagePercent = 
+			{
+				m_strCSSClass = "bullet_damage"
+				m_eDisplayUnits = "EDisplayUnit_Normal"
+				m_eDisplayType = "EBaseWeaponDamageIncrease"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_BASEATTACK_DAMAGE_PERCENT"
+				m_eStatsUsageFlags = ""
+				m_strValue = ""
+			}
+			ShootDurationForMax = 
+			{
+				m_strValue = "3"
+			}
+			BaseAttackDamagePercentAtMaxDuration = 
+			{
+				m_strValue = "50"
+				m_strCSSClass = "bullet_damage"
+				m_eDisplayUnits = "EDisplayUnit_Normal"
+				m_eDisplayType = "EBaseWeaponDamageIncrease"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_BASEATTACK_DAMAGE_PERCENT"
+				m_eStatsUsageFlags = "ConditionallyApplied"
 			}
 			SpinUpTime = 
 			{
@@ -260200,10 +260224,6 @@
 			{
 				m_strValue = "30"
 			}
-			BonusReloadTime = 
-			{
-				m_strValue = "0.0"
-			}
 		}
 		m_bitsPostCastEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
 		_editor = 
@@ -260218,7 +260238,7 @@
 		m_bitsPreCastEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
 		_multibase = 
 		[
-			"weapon_upgrade_t4",
+			"weapon_upgrade_t3",
 		]
 		m_bStartTrained = true
 		m_eAbilityType = "EAbilityType_Item"
@@ -260232,31 +260252,50 @@
 		m_flBossDamageScale = 1.000000
 		m_strAG2SourceName = "item"
 		m_eItemSlotType = "EItemSlotType_WeaponMod"
-		m_iItemTier = "EModTier_4"
-		m_bDisabled = true
-		m_strCSSClass = "autoReloader"
-		m_strAbilityImage = panorama:"file://{images}/upgrades/mods_weapon/auto_reloader.psd"
+		m_iItemTier = "EModTier_3"
+		m_iUpdateTime = 1708714325
+		m_vecComponentItems = 
+		[
+			"upgrade_intensifying_clip",
+		]
 		m_vecTooltipSectionInfo = 
 		[
 			
 			{
+				m_eAbilitySectionType = "EArea_Innate"
 				m_vecSectionAttributes = 
 				[
 					
 					{
-						m_strLocString = "#upgrade_belt_fed_magazine_desc"
+						m_vecAbilityProperties = 
+						[
+							"BonusClipSizePercent",
+							"BaseAttackDamagePercent",
+						]
+					},
+				]
+			},
+			
+			{
+				m_eAbilitySectionType = "EArea_Passive"
+				m_vecSectionAttributes = 
+				[
+					
+					{
+						m_strLocString = "#upgrade_accel_drum_desc"
 						m_vecImportantAbilityProperties = 
 						[
 							
 							{
-								m_strImportantProperty = "BonusClipSizePercent"
+								m_strImportantProperty = "BaseAttackDamagePercentAtMaxDuration"
 							},
-						]
-						m_vecAbilityProperties = 
-						[
-							"SpinUpTime",
-							"InitialFireRateDecrease",
-							"MaxFireRateIncrease",
+							
+							{
+								m_strImportantProperty = "ShootDurationForMax"
+							},
+							{
+								m_strImportantProperty = "MaxFireRateIncrease"
+							}
 						]
 					},
 				]
@@ -260264,6 +260303,25 @@
 		]
 		m_AutoIntrinsicModifiers = 
 		[
+			subclass:
+			{
+				_class = "modifier_intrinsic_base"
+				_my_subclass_name = "modifier_intrinsic_base"
+				m_vecAutoRegisterModifierValueFromAbilityPropertyName = 
+				[
+					"BonusClipSizePercent",
+				]
+			},
+			subclass:
+			{
+				_class = "modifier_intensifying_clip"
+				_my_subclass_name = "modifier_intensifying_clip"
+				m_vecAlwaysShowInStatModifierUI = 
+				[
+					"MODIFIER_VALUE_BASEATTACK_DAMAGE_PERCENT",
+				]
+				m_bIsHidden = true
+			},
 			subclass:
 			{
 				_class = "modifier_belt_fed_magazine"
@@ -260277,7 +260335,11 @@
 				]
 			},
 		]
-		m_eShopFilters = "EShopFilterFireRate | EShopFilterClipSize"
+		m_eShopFilters = "EShopFilterClipSize | EShopFilterWeaponDamage | EShopFilterFireRate"
+		m_strAbilityImage = panorama:"file://{images}/upgrades/mods_weapon/accel_drum.png"
+		m_strCSSClass = "intensifyingClip"
+		m_strShopIconLarge = panorama:"file://{images}/items/weapon/accel_drum.png"
+		m_strShopIconSmall = panorama:"file://{images}/items/weapon/accel_drum_sm.png"
 	}
 	upgrade_super_regen = 
 	{
