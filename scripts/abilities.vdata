@@ -261848,7 +261848,7 @@
 	}
 	upgrade_aoe_delay_blast = 
 	{
-		_class = "upgrade_aoe_delay_blast"
+		_class = "base_upgrade_projectile_aoe_modifier"
 		m_mapAbilityProperties = 
 		{
 			AbilityCooldown = 
@@ -261980,7 +261980,7 @@
 			}
 			Damage = 
 			{
-				m_strValue = 9999999
+				m_strValue = 999
 				m_strCSSClass = "tech_damage"
 				m_subclassScaleFunction = subclass:
 				{
@@ -262084,7 +262084,7 @@
 					{
 						m_vecAbilityProperties = 
 						[
-							"SpiritPower",
+							
 						]
 					},
 				]
