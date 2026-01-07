@@ -262134,6 +262134,15 @@
 		m_strCastSound = soundevent:"Ghost.BloodBomb.Cast"
 		m_strAG2CastCompletedAction = "throw_completed"
 		m_eShopFilters = "EShopFilterMagicDamage"
+		m_SpilledBloodModifier = subclass:
+		{
+			_class = "modifier_spilled_blood_thinker"
+			_my_subclass_name = "modifier_spilled_blood_thinker"
+			m_SpilledBloodParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_spilled_blood.vpcf"
+			m_flTickRate = 0.500000
+			m_flHeight = 80.000000
+			m_sAmbientLoopingSound = soundevent:"Ability.GhostSoldier.BloodBomb.AOE.Lp"
+		}
 		m_strShopIconLarge = panorama:"file://{images}/items/weapon/aoe_delay_blast.png"
 		m_strShopIconSmall = panorama:"file://{images}/items/weapon/aoe_delay_blast_sm.png"
 		m_strAG2CastingAction = "throw"
@@ -262618,14 +262627,6 @@
 					m_eSpecificStatScaleType = "ETechDuration"
 				}
 			}
-			TechResist = 
-			{
-				m_strValue = "30"
-				m_eDisplayType = "ETechArmorDamageReduction"
-				m_strCSSClass = "tech_armor_up"
-				m_eProvidedPropertyType = "MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST"
-				m_eStatsUsageFlags = "ConditionallyApplied"
-			}
 			DampingFactor = 
 			{
 				m_strValue = "3"
@@ -262634,14 +262635,6 @@
 			{
 				m_strValue = "120"
 			}
-			BonusSpirit = 
-			{
-				m_strValue = "20"
-				m_eDisplayType = "ETechPower"
-				m_strCSSClass = "tech_damage"
-				m_eProvidedPropertyType = "MODIFIER_VALUE_TECH_POWER"
-				m_eStatsUsageFlags = "ConditionallyApplied"
-			}
 			MoveSpeedMax = 
 			{
 				m_strValue = "3m"
@@ -262649,14 +262642,6 @@
 				m_strCSSClass = "slow"
 				m_eDisplayType = "EMaxMoveSpeed"
 				m_eProvidedPropertyType = "MODIFIER_VALUE_MOVE_SPEED_LIMIT"
-				m_eStatsUsageFlags = "ConditionallyApplied"
-			}
-			BonusMoveSpeed = 
-			{
-				m_strValue = "3m"
-				m_strCSSClass = "move_speed"
-				m_eProvidedPropertyType = "MODIFIER_VALUE_MOVEMENT_SPEED_MAX"
-				m_eDisplayType = "EMaxMoveSpeed"
 				m_eStatsUsageFlags = "ConditionallyApplied"
 			}
 		}
@@ -262713,9 +262698,7 @@
 						]
 						m_vecAbilityProperties = 
 						[
-							"BonusSpirit",
-							"TechResist",
-							"BonusMoveSpeed",
+
 							"AbilityCooldown",
 							"BuffDuration",
 						]
@@ -262746,9 +262729,6 @@
 				m_eHudDisplayLocation = "DISPLAY_HUD_NONE"
 				m_vecAutoRegisterModifierValueFromAbilityPropertyName = 
 				[
-					"BonusSpirit",
-					"TechResist",
-					"BonusMoveSpeed",
 				]
 			}
 			m_EmpParticle = resource_name:""
