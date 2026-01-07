@@ -262134,4 +262134,330 @@
 		m_strShopIconSmall = panorama:"file://{images}/items/weapon/aoe_delay_blast_sm.png"
 		m_strAG2CastingAction = "throw"
 	}
+	upgrade_super_parry = 
+	{
+		_class = "citadel_item"
+		m_mapAbilityProperties = 
+		{
+			AbilityCooldown = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_strCSSClass = "cooldown"
+				m_bCanSetTokenOverride = true
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "AbilityCooldown_scale_function"
+					m_eSpecificStatScaleType = "EItemCooldown"
+				}
+			}
+			AbilityDuration = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_strCSSClass = "duration"
+				m_bCanSetTokenOverride = true
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "AbilityDuration_scale_function"
+					m_eSpecificStatScaleType = "ETechDuration"
+				}
+			}
+			AbilityCastRange = 
+			{
+				m_strValue = "0"
+				m_eDisplayUnits = "EDisplayUnit_Meters"
+				m_strCSSClass = "range"
+				m_bCanSetTokenOverride = true
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "AbilityCastRange_scale_function"
+					m_eSpecificStatScaleType = "ETechRange"
+				}
+			}
+			AbilityUnitTargetLimit = 
+			{
+				m_strValue = "1"
+				m_bCanSetTokenOverride = true
+			}
+			AbilityCastDelay = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_strCSSClass = "cast"
+				m_bCanSetTokenOverride = true
+			}
+			AbilityChannelTime = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_strCSSClass = "cast"
+				m_bCanSetTokenOverride = true
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_multi_stats"
+					_my_subclass_name = "scale_duration"
+					m_vecScalingStats = 
+					[
+						"EChannelDuration",
+						"ETechDuration",
+					]
+				}
+			}
+			AbilityPostCastDuration = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+			}
+			AbilityCharges = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_strCSSClass = "cast"
+				m_bCanSetTokenOverride = true
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "AbilityCharges_scale_function"
+					m_eSpecificStatScaleType = "EMaxChargesIncrease"
+				}
+			}
+			AbilityCooldownBetweenCharge = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_strCSSClass = "charge_cooldown"
+				m_bCanSetTokenOverride = true
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "AbilityCooldownBetweenCharge_scale_function"
+					m_eSpecificStatScaleType = "ETechCooldownBetweenChargeUses"
+				}
+			}
+			ChannelMoveSpeed = 
+			{
+				m_strValue = "-1"
+				m_eDisplayUnits = "EDisplayUnit_MetersPerSecond"
+				m_strCSSClass = "move_speed"
+				m_bCanSetTokenOverride = true
+			}
+			AbilityResourceCost = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_bCanSetTokenOverride = true
+				m_strCSSClass = "cast"
+			}
+			TechPower = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_bCanSetTokenOverride = true
+				m_eProvidedPropertyType = "MODIFIER_VALUE_TECH_POWER"
+			}
+			WeaponPower = 
+			{
+				m_strValue = "0"
+				m_strDisableValue = "0"
+				m_bCanSetTokenOverride = true
+				m_eProvidedPropertyType = "MODIFIER_VALUE_WEAPON_POWER"
+			}
+			BonusHealth = 
+			{
+				m_strValue = "150"
+				m_strCSSClass = "health"
+				m_eDisplayType = "EMaxHealth"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_HEALTH_MAX"
+				m_eStatsUsageFlags = ""
+			}
+			ParryCooldownReduction = 
+			{
+				m_strValue = "2"
+				m_eDisplayType = "ETechCooldown"
+				m_strCSSClass = "cooldown"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_PARRY_COOLDOWN_REDUCTION_FIXED"
+			}
+			BuffDuration = 
+			{
+				m_strValue = "6"
+				m_strCSSClass = "duration"
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "SlowDuration_scale_function"
+					m_eSpecificStatScaleType = "ETechDuration"
+				}
+			}
+			BonusDamagePercent = 
+			{
+				m_strCSSClass = "damage"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_DAMAGE_PERCENT"
+				m_eStatsUsageFlags = "ConditionallyApplied"
+				m_strValue = "40"
+			}
+			ParrySuccessHealPercentage = 
+			{
+				m_strValue = "100"
+				m_strCSSClass = "healing"
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "ParrySuccessHeal_scale_function"
+					m_eSpecificStatScaleType = "EHealingOutput"
+				}
+			}
+			MeleeResistPercent = 
+			{
+				m_strValue = "30"
+				m_eDisplayType = "EMeleeResist"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_MELEE_DAMAGE_REDUCTION_PERCENT"
+				m_eStatsUsageFlags = ""
+			}
+			TechResist = 
+			{
+				m_strValue = "50"
+				m_eDisplayType = "ETechArmorDamageReduction"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST"
+				m_eStatsUsageFlags = "ConditionallyApplied"
+			}
+			BulletResist = 
+			{
+				m_strValue = "50"
+				m_eDisplayType = "EBulletArmorDamageReduction"
+				m_strCSSClass = "bullet_armor_up"
+				m_eProvidedPropertyType = "MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST"
+				m_eStatsUsageFlags = "ConditionallyApplied"
+			}
+		}
+		m_bitsPostCastEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
+		_editor = 
+		{
+			folder_name = "Armor"
+		}
+		m_WeaponInfo = 
+		{
+			m_flBulletSpeed = 10000.000000
+		}
+		m_bitsChannelEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
+		m_bitsPreCastEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
+		_multibase = 
+		[
+			"armor_upgrade_t3",
+		]
+		m_bStartTrained = true
+		m_eAbilityType = "EAbilityType_Item"
+		m_nUpgradeSlotCost = 1
+		m_eAbilityTargetingLocation = "CITADEL_ABILITY_TARGETING_LOCATION_SELF"
+		m_eAbilityActivation = "CITADEL_ABILITY_ACTIVATION_PASSIVE"
+		m_strCastAnimGraphParam = "e_GenericCast"
+		m_strCastAnimSequenceName = "ability_generic_cast"
+		m_strSelectionNameOverride = "item"
+		m_PreviewPathParticle = resource_name:"particles/generic/generic_arc.vpcf"
+		m_flBossDamageScale = 1.000000
+		m_strAG2SourceName = "item"
+		m_eItemSlotType = "EItemSlotType_Armor"
+		m_iItemTier = "EModTier_3"
+		m_strCSSClass = "parryRebuttal"
+		m_strAbilityImage = panorama:"file://{images}/hud/modifiers/icon_super_parry.png"
+		m_vecComponentItems = 
+		[
+			"upgrade_melee_rebuttal",
+		]
+		m_nAbilityTargetTypes = "CITADEL_UNIT_TARGET_ALL_ENEMY"
+		m_vecTooltipSectionInfo = 
+		[
+			
+			{
+				m_eAbilitySectionType = "EArea_Innate"
+				m_vecSectionAttributes = 
+				[
+					
+					{
+						m_vecAbilityProperties = 
+						[
+							"ParryCooldownReduction",
+							"MeleeResistPercent",
+							"BonusHealth",
+						]
+					},
+				]
+			},
+			
+			{
+				m_eAbilitySectionType = "EArea_Passive"
+				m_vecSectionAttributes = 
+				[
+					
+					{
+						m_strLocString = "#upgrade_super_parry_desc"
+						m_vecImportantAbilityProperties = 
+						[
+							
+							{
+								m_strImportantProperty = "BonusDamagePercent"
+							},
+							
+							{
+								m_strImportantProperty = "ParrySuccessHeal"
+							},
+
+							{
+								m_strImportantProperty = "TechResist"
+							},
+
+							{
+								m_strImportantProperty = "BulletResist"
+							},
+						]
+						m_vecAbilityProperties = 
+						[
+							"BuffDuration",
+						]
+					},
+				]
+			},
+		]
+		m_AutoIntrinsicModifiers = 
+		[
+			subclass:
+			{
+				_class = "modifier_rebuttal_watcher"
+				_my_subclass_name = "modifier_rebuttal_watcher"
+				m_bIsHidden = true
+				m_vecAutoRegisterModifierValueFromAbilityPropertyName = 
+				[
+					"ParryCooldownReduction",
+					"MeleeResistPercent",
+					"BonusHealth",
+				]
+				m_BuffModifier = subclass:
+				{
+					_class = "modifier_base"
+					_my_subclass_name = "modifier_active"
+					m_strParticleEffect = resource_name:"particles/upgrades/rebuttal.vpcf"
+					m_strParticleStatusEffect = resource_name:""
+					m_sLocalizationName = "upgrade_melee_rebuttal"
+					m_bIsHidden = true
+					m_strHudMessageText = "#upgrade_melee_rebuttal"
+					m_vecAutoRegisterModifierValueFromAbilityPropertyName = 
+					[
+						"BonusDamagePercent",
+						"TechResist",
+						"BulletResist",
+					]
+				}
+				m_strParticleEffect = resource_name:""
+				m_strSuccessProcSound = soundevent:"Mods.Armor.Rebuttal.Proc"
+				m_strLightMeleeSweetenerSound = soundevent:"Mods.Armor.Rebuttal.LightMelee.Sweetener"
+				m_strHeavyMeleeSweetenerSound = soundevent:"Mods.Armor.Rebuttal.HeavyMelee.Sweetener"
+			},
+		]
+		m_eShopFilters = "EShopFilterDurability | EShopFilterMelee | EShopFilterHealing"
+		m_strShopIconLarge = panorama:"file://{images}/items/vitality/super_parry.png"
+		m_strShopIconSmall = panorama:"file://{images}/items/vitality/super_parry_sm.png"
+	}
 }

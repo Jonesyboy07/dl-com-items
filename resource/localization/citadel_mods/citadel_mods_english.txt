@@ -1146,10 +1146,12 @@
 		"StackingGoldPerMinute_postvalue_label"			"Souls per Minute"
 		
 		//"upgrade_soothing_stone"
-		<span class=\"diminish\"><br>Can be self-cast. Cooldown is reduced by half when cast on someone else.</span>
 		"upgrade_soothing_stone_active_desc"		"When an enemy uses an ability within {s:Radius}m range from you, store one <span class=\"highlight\">Restoration Stack</span>. <br><br>Consume all stacks to <span class=\"highlight\">heal target ally</span> and replenish <span class=\"highlight\">{s:StaminaToRestore} stamina points</span>. Can be self-cast. Cooldown is reduced by half when cast on someone else."
 		"modifier_restorative_locket_stacks"				"Restorative Locket"
 		"HealPerStack_label"								"Heal Per Stack"
+
+		//"upgrade_charging_bull"
+		"upgrade_super_parry_desc"				"On a successful <span class=\"highlight\">Parry</span> against an enemy Hero, <span class=\"highlight\">Heal</span> yourself for the damage parried and returns that damage to the target, and temporarily gain increased <span class=\"highlight\">damage, bullet resist and spirit resist.</span>"
 		//-----------------------------------------------------------------------------
 		// Upgrades: Utility
 		//----------------------------------------------------------------------------- 
