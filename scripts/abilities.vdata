@@ -261462,7 +261462,7 @@
 		m_strShopIconLarge = panorama:"file://{images}/items/weapon/top_brass.psd"
 		m_strShopIconSmall = panorama:"file://{images}/items/weapon/top_brass_sm.png"
 	}
-	upgrade_unending_despair = 
+	upgrade_unending_dispair = 
 	{
 		_class = "upgrade_tech_damage_pulse"
 		m_mapAbilityProperties = 
@@ -261650,67 +261650,28 @@
 				m_eProvidedPropertyType = "MODIFIER_VALUE_MELEE_DAMAGE_REDUCTION_PERCENT"
 				m_eStatsUsageFlags = ""
 			}
-			StealPerHit = 
+			DamageHealMult = 
 			{
-				m_strValue = "1"
-			}
-			StealPerKill = 
-			{
-				m_strValue = "0"
-			}
-			StackLostPerDeath = 
-			{
-				m_strValue = "0"
-			}
-			MaxStacks = 
-			{
-				m_strValue = "0"
-			}
-			StealDuration = 
-			{
-				m_strValue = "17"
-				m_strCSSClass = "duration"
+				m_strValue = "0.5"
+				m_strCSSClass = "healing"
+				m_eDisplayType = "EHealthRegen"
 				m_subclassScaleFunction = subclass:
 				{
 					_class = "scale_function_single_stat"
-					_my_subclass_name = "DebuffDuration_scale_function"
-					m_eSpecificStatScaleType = "ETechDuration"
+					_my_subclass_name = "DamageHealMult_scale_function"
+					m_eSpecificStatScaleType = "EHealingOutput"
 				}
 			}
-			ProcCooldown = 
+			DamageHealMultNonHero = 
 			{
-				m_strValue = 1.400000
-				m_strDisableValue = "0"
-				m_strCSSClass = "cooldown"
-				m_bCanSetTokenOverride = true
+				m_strValue = "0.5"
+				m_strCSSClass = "healing"
+				m_eDisplayType = "EHealthRegen"
 				m_subclassScaleFunction = subclass:
 				{
 					_class = "scale_function_single_stat"
-					_my_subclass_name = "AbilityCooldown_scale_function"
-					m_eSpecificStatScaleType = "EItemCooldown"
-				}
-			}
-			HealthSteal = 
-			{
-				m_strValue = "27"
-				m_strCSSClass = "health"
-				m_subclassScaleFunction = subclass:
-				{
-					_class = "scale_function_single_stat"
-					_my_subclass_name = "Damage_scale_function"
-					m_eSpecificStatScaleType = "ETechPower"
-					m_flStatScale = 0.279000
-				}
-			}
-			ParticleRadius = 
-			{
-				m_strValue = "1m"
-				m_strCSSClass = "distance"
-				m_subclassScaleFunction = subclass:
-				{
-					_class = "scale_function_single_stat"
-					_my_subclass_name = "Radius_scale_function"
-					m_eSpecificStatScaleType = "ETechRange"
+					_my_subclass_name = "DamageHealMultNonHero_scale_function"
+					m_eSpecificStatScaleType = "EHealingOutput"
 				}
 			}
 		}
@@ -261791,29 +261752,13 @@
 						[
 							"DamagePulseRadius",
 							"AbilityCooldown",
-							"HealthSteal",
-							"ProcCooldown",
+							"DamageHealMult",
+							"DamageHealMultNonHero",
 						]
 					},
 				]
 			},
 		]
-		m_PermanentHealthLoss = subclass:
-		{
-			_class = "modifier_base"
-			_my_subclass_name = "modifier_siphon_life_permanent_loss"
-			m_bNetworkValuesForStatsPreview = true
-			m_bIsHidden = true
-			m_nAttributes = "MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_CANNOT_BE_PURGED"
-			m_vecScriptValues = 
-			[
-				
-				{
-					m_eModifierValue = "MODIFIER_VALUE_HEALTH_MAX"
-					m_value = -55
-				},
-			]
-		}
 		m_AutoIntrinsicModifiers = 
 		[
 			subclass:
@@ -261829,71 +261774,10 @@
 				]
 				m_sStartSound = soundevent:""
 			},
-			{
-				_class = "modifier_siphon_bullets"
-				_my_subclass_name = "modifier_siphon_bullets"
-				m_bIsHidden = true
-				m_TracerParticle = resource_name:"particles/weapon_fx/emp_bullets_tracer.vpcf"
-				m_vecProcDamageTypes = 
-				[
-					"CITADEL_DAMAGETYPE_ABILITY",
-				]
-				m_bCanProcByOtherObjects = false
-				m_bShouldApplyAbilityCooldown = false
-				m_bRequiresTargetFilter = true
-				m_StealWatcherModifier = subclass:
-				{
-					_class = "modifier_siphon_bullets_watcher"
-					_my_subclass_name = "modifier_siphon_bullets_watcher"
-					m_bIsHidden = true
-					m_StatStolenBuffModifier = subclass:
-					{
-						_class = "modifier_base"
-						_my_subclass_name = "modifier_siphon_bullets_health_gain"
-						m_sLocalizationName = "modifier_siphon_bullets_health_gain"
-						m_strParticleEffect = resource_name:"particles/upgrades/siphon_bullets_buff.vpcf"
-						m_strSmallIconCssClass = "siphon_bullets"
-						m_eModifierDisplayLocaiton = "MODIFIER_DISPLAY_HEALTHBAR"
-						m_eHudDisplayLocation = "DISPLAY_HUD_NONE"
-					}
-					m_StatStolenDebuffModifier = subclass:
-					{
-						_class = "modifier_siphon_bullets_health_loss"
-						_my_subclass_name = "modifier_siphon_bullets_health_loss"
-						m_sLocalizationName = "modifier_siphon_bullets_health_loss"
-						m_SiphonParticle = resource_name:"particles/upgrades/siphon_bullets_proc.vpcf"
-						m_strParticleEffect = resource_name:"particles/upgrades/siphon_bullets_debuff.vpcf"
-						m_nEnabledStateMask = "MODIFIER_STATE_SIPHON_BULLET_LOSS"
-						m_nAttributes = "MODIFIER_ATTRIBUTE_MULTIPLE"
-						m_eModifierDisplayLocaiton = "MODIFIER_DISPLAY_HEALTHBAR"
-						m_eHudDisplayLocation = "DISPLAY_HUD_NONE"
-						m_HealModifier = subclass:
-						{
-							_class = "modifier_siphon_bullets_restore_health"
-							_my_subclass_name = "modifier_siphon_bullets_restore_health"
-							m_bIsHidden = true
-						}
-						m_eDrawOverheadStatus = "OVERHEAD_DRAW_FOR_EVERYONE"
-						m_strSmallIconCssClass = "siphon_bullets"
-					}
-					m_HealModifier = subclass:
-					{
-						_class = "modifier_siphon_bullets_restore_health"
-						_my_subclass_name = "modifier_siphon_bullets_restore_health"
-						m_bIsHidden = true
-					}
-				}
-				m_vecAutoRegisterModifierValueFromAbilityPropertyName = 
-				[
-					"BonusHealth",
-					"MeleeResistPercent",
-					"AbilityLifestealPercentHero",
-				]
-			},
 		]
 		m_eShopFilters = "EShopFilterMagicDamage | EShopFilterDurability"
 		m_strCastSound = soundevent:""
-		m_strShopIconLarge = panorama:"file://{images}/items/spirit/unending_despair.psd"
-		m_strShopIconSmall = panorama:"file://{images}/items/spirit/unending_despair_sm.png"
+		m_strShopIconLarge = panorama:"file://{images}/items/spirit/unending_dispair.psd"
+		m_strShopIconSmall = panorama:"file://{images}/items/spirit/unending_dispair_sm.png"
 	}
 }
