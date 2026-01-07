@@ -260043,7 +260043,7 @@
 		]
 		m_eShopFilters = "EShopFilterMagicDamage | EShopFilterDurability"
 		m_strShopIconLarge = panorama:"file://{images}/items/spirit/tech_range.png"
-		m_strShopIconSmall = panorama:"file://{images}/items/spirit/tech_range.png"
+		m_strShopIconSmall = panorama:"file://{images}/items/spirit/tech_range_sm.png"
 	}
 	upgrade_accel_drum = 
 	{
@@ -260743,7 +260743,7 @@
 		m_nAbilityTargetTypes = "CITADEL_UNIT_TARGET_HERO_ENEMY"
 		m_flTargetingConeAngle = 45
 		m_strCSSClass = "sleep_blast"
-		m_strAbilityImage = panorama:"file://{images}/upgrades/mods_tech/sleep_blast.psd"
+		m_strAbilityImage = panorama:"file://{images}/upgrades/mods_tech/sleep_blast.png"
 		m_vecComponentItems = 
 		[
 			"upgrade_restorative_locket",
@@ -260850,8 +260850,8 @@
 			},
 		]
 		m_eShopFilters = "EShopFilterDisruption | EShopFilterWeaponDamage"
-		m_strShopIconLarge = panorama:"file://{images}/items/spirit/sleep_blast.psd"
-		m_strShopIconSmall = panorama:"file://{images}/items/spirit/sleep_blast.png"
+		m_strShopIconLarge = panorama:"file://{images}/items/spirit/sleep_blast.png"
+		m_strShopIconSmall = panorama:"file://{images}/items/spirit/sleep_blast_sm.png"
 	}
 	upgrade_soothing_stone = 
 	{
@@ -261086,7 +261086,7 @@
 		m_eAbilityTargetingShape = "CITADEL_ABILITY_TARGETING_SHAPE_CONE"
 		m_flTargetingConeAngle = 45
 		m_strCSSClass = "restorativeLocket"
-		m_strAbilityImage = panorama:"file://{images}/upgrades/mods_armor/restorative_locket.psd"
+		m_strAbilityImage = panorama:"file://{images}/upgrades/mods_armor/restorative_locket.png"
 		m_vecComponentItems = 
 		[
 			"upgrade_restorative_locket",
@@ -261151,7 +261151,7 @@
 			},
 		]
 		m_eShopFilters = "EShopFilterHealing | EShopFilterDurability"
-		m_strShopIconLarge = panorama:"file://{images}/items/vitality/soothing_stone.psd"
+		m_strShopIconLarge = panorama:"file://{images}/items/vitality/soothing_stone.png"
 		m_strShopIconSmall = panorama:"file://{images}/items/vitality/soothing_stone_sm.png"
 		m_strSelectedSound = soundevent:"Mods.Armor.RestorativeLocket.Select"
 		m_strUnselectedSound = soundevent:"Mods.Armor.RestorativeLocket.Unselect"
@@ -261704,7 +261704,7 @@
 		m_eItemSlotType = "EItemSlotType_Tech"
 		m_iItemTier = "EModTier_4"
 		m_strCSSClass = "tormentAura"
-		m_strAbilityImage = panorama:"file://{images}/upgrades/mods_tech/torment_aura.psd"
+		m_strAbilityImage = panorama:"file://{images}/upgrades/mods_tech/unending_despair.png"
 		m_vecComponentItems = 
 		[
 			"upgrade_tech_damage_pulse",
@@ -261777,7 +261777,7 @@
 		]
 		m_eShopFilters = "EShopFilterMagicDamage | EShopFilterDurability"
 		m_strCastSound = soundevent:""
-		m_strShopIconLarge = panorama:"file://{images}/items/spirit/unending_despair.psd"
+		m_strShopIconLarge = panorama:"file://{images}/items/spirit/unending_despair.png"
 		m_strShopIconSmall = panorama:"file://{images}/items/spirit/unending_despair_sm.png"
 	}
 }
