@@ -261740,7 +261740,7 @@
 				[
 					
 					{
-						m_strLocString = "#upgrade_tech_damage_pulse_desc"
+						m_strLocString = "#upgrade_unending_despair_desc"
 						m_vecImportantAbilityProperties = 
 						[
 							
