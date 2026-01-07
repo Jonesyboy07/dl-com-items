@@ -262031,19 +262031,9 @@
 		}
 		m_WeaponInfo = 
 		{
-			m_flBulletSpeed = 1600.000000
-			m_szBulletTravelTracerParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_projectile.vpcf"
-			m_strBulletLoopingSound = soundevent:"Ability.GhostSoldier.BloodBomb.Lp"
-			m_eAttachmentSourceType = "EAttachmentSource_Custom"
-			m_flVerticalAimBias = 10.000000
-			m_flBulletRadius = 1.000000
-			m_nBehaviors = "PBF_StickToWorld | PBF_StartDetonateTimeOnHitTarget | PBF_StartDetonateTimeOnHitWorld"
-			m_mapImpactEffects = 
-			{
-				default = 
-				{
-				}
-			}
+			m_flBulletSpeed = 10000.000000
+			m_strBulletImpactSound = soundevent:""
+		}
 		}
 		m_bitsChannelEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
 		m_bitsPreCastEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
@@ -262074,10 +262064,10 @@
 		m_projectileInfo = 
 		{
 			m_flSpeed = 2000
-			m_flUpSpeed = 100
+			m_flUpSpeed = 0
 			m_particle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_projectile.vpcf"
 			m_warningParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_warning.vpcf"
-			m_flVerticalAimBias = 4.500000 
+			m_flVerticalAimBias = 4.500000
 			m_nBehaviors = "PBF_StickToWorld | PBF_StartDetonateTimeOnHitTarget | PBF_StartDetonateTimeOnHitWorld"
 			m_DetonateSound = soundevent:"Ability.GhostSoldier.BloodBomb.Explode"
 			m_WarningSound = soundevent:"Ability.GhostSoldier.BloodBomb.Warning"
@@ -262085,6 +262075,7 @@
 			m_HitSound = soundevent:""
 		}
 		m_previewParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_preview.vpcf"
+		m_strSecondaryStatName = "ability_blood_bomb_bloodspill"
 		m_ExplodeParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_explode.vpcf"
 		m_vecTooltipSectionInfo = 
 		[
