@@ -262441,6 +262441,7 @@
 					"ParryCooldownReduction",
 					"MeleeResistPercent",
 					"BonusHealth",
+					"Stamina",
 				]
 				m_BuffModifier = subclass:
 				{
