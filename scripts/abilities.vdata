@@ -262059,8 +262059,16 @@
 		}
 		m_WeaponInfo = 
 		{
-			m_flBulletSpeed = 10000.000000
-			m_strBulletImpactSound = soundevent:""
+			m_flSpeed = 2000
+			m_flUpSpeed = 0
+			m_particle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_projectile.vpcf"
+			m_warningParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_warning.vpcf"
+			m_flVerticalAimBias = 4.500000
+			m_nBehaviors = "PBF_StickToWorld | PBF_StartDetonateTimeOnHitTarget | PBF_StartDetonateTimeOnHitWorld"
+			m_DetonateSound = soundevent:"Ability.GhostSoldier.BloodBomb.Explode"
+			m_WarningSound = soundevent:"Ability.GhostSoldier.BloodBomb.Warning"
+			m_LoopingSound = soundevent:"Ability.GhostSoldier.BloodBomb.Lp"
+			m_HitSound = soundevent:""
 		}
 		}
 		m_bitsChannelEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
