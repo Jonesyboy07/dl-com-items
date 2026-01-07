@@ -206937,7 +206937,7 @@
 				m_TracerParticle = resource_name:"particles/weapon_fx/emp_bullets_tracer.vpcf"
 				m_vecProcDamageTypes = 
 				[
-					"CITADEL_DAMAGETYPE_ABILITY",
+					"CITADEL_DAMAGETYPE_BULLET",
 				]
 				m_bCanProcByOtherObjects = true
 				m_bShouldApplyAbilityCooldown = false
@@ -261828,6 +261828,8 @@
 					"AbilityLifestealPercentHero",
 				]
 				m_sStartSound = soundevent:""
+			},
+			{
 				_class = "modifier_siphon_bullets"
 				_my_subclass_name = "modifier_siphon_bullets"
 				m_bIsHidden = true
