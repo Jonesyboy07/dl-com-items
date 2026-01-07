@@ -261901,7 +261901,7 @@
 			}
 			AbilityCastDelay = 
 			{
-				m_strValue = "0.2"
+				m_strValue = "0"
 				m_strDisableValue = "0"
 				m_strCSSClass = "cast"
 				m_bCanSetTokenOverride = true
@@ -261982,9 +261982,21 @@
 				m_bCanSetTokenOverride = true
 				m_eProvidedPropertyType = "MODIFIER_VALUE_WEAPON_POWER"
 			}
+			SelfDamage = 
+			{
+				m_strValue = "0"
+				m_strCSSClass = "tech_damage"
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "SelfDamage_scale_function"
+					m_eSpecificStatScaleType = "ETechPower"
+					m_flStatScale = 1.600000
+				}
+			}
 			Damage = 
 			{
-				m_strValue = 999
+				m_strValue = 99999
 				m_strCSSClass = "tech_damage"
 				m_subclassScaleFunction = subclass:
 				{
@@ -261997,7 +262009,7 @@
 			}
 			Radius = 
 			{
-				m_strValue = "10m"
+				m_strValue = "9m"
 				m_strCSSClass = "distance"
 				m_subclassScaleFunction = subclass:
 				{
@@ -262008,7 +262020,7 @@
 			}
 			ArmingDuration = 
 			{
-				m_strValue = "3"
+				m_strValue = "10"
 				m_strCSSClass = "duration"
 			}
 			BeepSoundIntervalBias = 
@@ -262023,7 +262035,23 @@
 			{
 				m_strValue = "4"
 			}
-		}
+			BloodSpillDPSPercent = 
+			{
+				m_strValue = 0.000000
+				m_strCSSClass = "tech_damage"
+				m_bIsAbilityDamageProperty = false
+			}
+			BloodSpillDuration = 
+			{
+				m_strValue = "0"
+				m_strCSSClass = "tech_damage"
+				m_subclassScaleFunction = subclass:
+				{
+					_class = "scale_function_single_stat"
+					_my_subclass_name = "BloodSpillDuration_scale_function"
+					m_eSpecificStatScaleType = "ETechDuration"
+				}
+			}
 		m_bitsPostCastEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
 		_editor = 
 		{
@@ -262044,8 +262072,10 @@
 		m_bStartTrained = true
 		m_eAbilityType = "EAbilityType_Item"
 		m_nUpgradeSlotCost = 1
+		m_bitsInterruptingStates = "MODIFIER_STATE_STUNNED"
 		m_PreviewPathParticle = resource_name:"particles/generic/generic_arc.vpcf"
-		m_flBossDamageScale = 1.000000
+		m_skillshotMissParticle = resource_name:"particles/abilities/skillshot_default_miss_owner.vpcf"
+		m_flBossDamageScale = 0.01
 		m_iUpdateTime = 1666646108
 		m_strCastAnimGraphParam = "e_GenericThrow"
 		m_strCastAnimSequenceName = "ability_generic_cast"
@@ -262058,7 +262088,7 @@
 		m_eAbilityTargetingShape = "CITADEL_ABILITY_TARGETING_SHAPE_CIRCLE"
 		m_eAbilityTargetingLocation = "CITADEL_ABILITY_TARGETING_LOCATION_NONE"
 		m_eAbilityActivation = "CITADEL_ABILITY_ACTIVATION_PRESS"
-		m_strAbilityImage = panorama:"file://{images}/hud/abilities/spectre/blood_bomb.psd"
+		m_strAbilityImage = panorama:"file://{images}/hud/abilities/spectre/aoe_delay_blast.png"
 		m_AbilityBehaviorsBits = "CITADEL_ABILITY_BEHAVIOR_PROJECTILE | CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT | CITADEL_ABILITY_BEHAVIOR_PROJECTILE_FIRED_AS_BULLET | CITADEL_ABILITY_BEHAVIOR_CAN_SET_QUICK_CAST"
 		m_nAbilityTargetTypes = "CITADEL_UNIT_TARGET_ALL_ENEMY"
 		m_projectileInfo = 
@@ -262077,6 +262107,15 @@
 		m_previewParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_preview.vpcf"
 		m_strSecondaryStatName = "ability_blood_bomb_bloodspill"
 		m_ExplodeParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_explode.vpcf"
+		m_SpilledBloodModifier = subclass:
+		{
+			_class = "modifier_spilled_blood_thinker"
+			_my_subclass_name = "modifier_spilled_blood_thinker"
+			m_SpilledBloodParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_spilled_blood.vpcf"
+			m_flTickRate = 0.500000
+			m_flHeight = 80.000000
+			m_sAmbientLoopingSound = soundevent:"Ability.GhostSoldier.BloodBomb.AOE.Lp"
+		}
 		m_vecTooltipSectionInfo = 
 		[
 			
@@ -262123,17 +262162,12 @@
 		]
 		m_strSelectedLoopSound = soundevent:"Ability.GhostSoldier.BloodBomb.Select.Lp"
 		m_strCastSound = soundevent:"Ghost.BloodBomb.Cast"
+		m_mapCastEventParticles = 
+		{
+			CAST_COMPLETED = resource_name:"particles/abilities/ghost/ghost_blood_shard_dagger_self_dmg.vpcf"
+		}
 		m_strAG2CastCompletedAction = "throw_completed"
 		m_eShopFilters = "EShopFilterMagicDamage"
-		m_SpilledBloodModifier = subclass:
-		{
-			_class = "modifier_spilled_blood_thinker"
-			_my_subclass_name = "modifier_spilled_blood_thinker"
-			m_SpilledBloodParticle = resource_name:"particles/abilities/ghost/ghost_blood_bomb_spilled_blood.vpcf"
-			m_flTickRate = 0.500000
-			m_flHeight = 80.000000
-			m_sAmbientLoopingSound = soundevent:"Ability.GhostSoldier.BloodBomb.AOE.Lp"
-		}
 		m_strShopIconLarge = panorama:"file://{images}/items/weapon/aoe_delay_blast.png"
 		m_strShopIconSmall = panorama:"file://{images}/items/weapon/aoe_delay_blast_sm.png"
 		m_strAG2CastingAction = "throw"
