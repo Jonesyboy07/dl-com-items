@@ -262027,8 +262027,18 @@
 		}
 		m_WeaponInfo = 
 		{
-			m_flBulletSpeed = 10000.000000
-			m_strBulletImpactSound = soundevent:""
+			m_flBulletSpeed = 1600.000000
+			m_szBulletTravelTracerParticle = resource_name:"particles/items/thermal_detonator_projectile.vpcf"
+			m_strBulletLoopingSound = soundevent:"Mods.Weapon.Thermal.Detonator.Proj.Lp"
+			m_eAttachmentSourceType = "EAttachmentSource_Custom"
+			m_flVerticalAimBias = 10.000000
+			m_flBulletRadius = 1.000000
+			m_mapImpactEffects = 
+			{
+				default = 
+				{
+				}
+			}
 		}
 		m_bitsChannelEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
 		m_bitsPreCastEnabledStateMask = "MODIFIER_STATE_BUSY_WITH_ACTION"
@@ -262117,15 +262127,10 @@
 		]
 		m_strSelectedLoopSound = soundevent:"Ability.GhostSoldier.BloodBomb.Select.Lp"
 		m_strCastSound = soundevent:"Ghost.BloodBomb.Cast"
-		m_mapCastEventParticles = 
-		{
-			CAST_COMPLETED = resource_name:"particles/abilities/ghost/ghost_blood_shard_dagger_self_dmg.vpcf"
-		}
 		m_strAG2CastCompletedAction = "throw_completed"
 		m_eShopFilters = "EShopFilterMagicDamage"
 		m_strShopIconLarge = panorama:"file://{images}/items/weapon/aoe_delay_blast.png"
 		m_strShopIconSmall = panorama:"file://{images}/items/weapon/aoe_delay_blast_sm.png"
 		m_strAG2CastingAction = "throw"
-		m_strAG2ChannelingAction = ""
 	}
 }
