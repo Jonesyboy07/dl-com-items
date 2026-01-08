@@ -217,7 +217,7 @@
 		"upgrade_zeus"							"Doomsday Watch"
 		"upgrade_gaslight"						"Haunted Casette"
 		"upgrade_switcheroo"					"Switcheroo"
-
+		"upgrade_mfd"							"Cult's insignia"
 		//-----------------------------------------------------------------------------
 		// Upgrades: Armor
 		//-----------------------------------------------------------------------------

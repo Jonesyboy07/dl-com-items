@@ -508,6 +508,17 @@
 		"upgrade_crushing_fists_desc"			"Your <span class=\"highlight\">{g:citadel_inline_attribute:'MeleeDamage'}</span> will <span class=\"highlight\">restore ammo</span> and apply a <span class=\"highlight\">stacking bullet resist debuff</span> on enemies. Heavy melee applies 2 stacks. <br><br>If the target reaches max stacks, they will be <span class=\"highlight\">stunned</span>."
 		"notification_crushing_fists_stun"		"Crushing Fists - Stun!"
 
+		//unending_despair
+		"upgrade_unending_despair_desc"	"Periodically deals <span class=\"highlight\">Spirit Damage</span> to <span class=\"highlight\">all</span> enemies nearby."
+
+		//accel_drum
+		"upgrade_accel_drum_desc"				"Increases <span class=\"highlight\">Weapon Damage</span> and <span class=\"highlight\">attack speed</span> as you continuously fire your weapon."
+		"BaseAttackDamagePercentAtMaxDuration_label"	"Max Weapon Damage"
+		"BaseAttackDamagePercentAtMaxDuration_postvalue_label"	"Max Weapon Damage"
+		"BaseAttackDamagePercentAtMaxDuration_postfix"		"%"
+		"ShootDurationForMax_label"						"Time for Max Damage/firerate"
+		"ShootDurationForMax_postvalue_label"						"Time for Max Damage"
+		"ShootDurationForMax_postfix"							"s"
 		//-----------------------------------------------------------------------------
 		// Upgrades: Tech
 		//-----------------------------------------------------------------------------
@@ -871,6 +882,9 @@
 		"HeroMultiplier_label" "Hero Explosion Multiplier"
 		"HeroMultiplier_postvalue_label" "Hero Explosion Multiplier"
 		"HeroMultiplier_postfix" "%"
+
+		//Devil's Chalk
+		"upgrade_aoe_delay_blast_desc"			"BIG BOOM"
 		//-----------------------------------------------------------------------------
 		// Upgrades: Armor
 		//-----------------------------------------------------------------------------
@@ -1131,7 +1145,13 @@
 		
 		"StackingGoldPerMinute_postvalue_label"			"Souls per Minute"
 		
-		
+		//"upgrade_soothing_stone"
+		"upgrade_soothing_stone_active_desc"		"When an enemy uses an ability within {s:Radius}m range from you, store one <span class=\"highlight\">Restoration Stack</span>. <br><br>Consume all stacks to <span class=\"highlight\">heal target ally</span> and replenish <span class=\"highlight\">{s:StaminaToRestore} stamina points</span>. Can be self-cast. Cooldown is reduced by half when cast on someone else."
+		"modifier_restorative_locket_stacks"				"Restorative Locket"
+		"HealPerStack_label"								"Heal Per Stack"
+
+		//"upgrade_charging_bull"
+		"upgrade_super_parry_desc"				"On a successful <span class=\"highlight\">Parry</span> against an enemy Hero, <span class=\"highlight\">Heal</span> yourself for the damage parried and returns that damage to the target, and temporarily gain increased <span class=\"highlight\">damage, bullet resist and spirit resist.</span>"
 		//-----------------------------------------------------------------------------
 		// Upgrades: Utility
 		//----------------------------------------------------------------------------- 
